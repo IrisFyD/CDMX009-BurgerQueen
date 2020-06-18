@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from '../../assets/logo-rocky.png'
+import StyleHeader from './StyleHeader.css'
 
 function Header (){
     return (
-        <div> 
+        <div className={StyleHeader}> 
             <nav>
                 <button>Ordenar</button>
                 <button>Producción</button>

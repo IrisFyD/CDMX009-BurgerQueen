@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import StyleFooter from './StyleFooter.css'
 
 function Footer (){
     return (
-        <div>
+        <div className={StyleFooter}>
             <p>Este es el Footer</p>
         </div>
     )

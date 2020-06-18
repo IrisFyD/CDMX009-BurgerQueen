@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAC;EACA,gBAAgB,EAAE,OAAO;EAEzB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,UAAU;CAKA;;AAT/B,AAKI,GALD,CAKC,GAAG,CAAC;EACA,UAAU,EAAE,QAAQ;CAGC;;AAT7B,AAOQ,GAPL,CAKC,GAAG,CAEC,GAAG,CAAC;EACA,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CAAG",
+    "sources": [
+        "StyleHeader.sass"
+    ],
+    "names": [],
+    "file": "StyleHeader.css"
+}
