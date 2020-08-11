@@ -1,67 +1,48 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import './menu.css'
-import product from '../../data/products';
-
-const Menu = ({addProduct,addItemToOrder, order}) => {
-
-    // console.log(order)
-
-    // const[order, setOrder]=useState([]);
-
-    // function addOrder (){
-    //     return setOrder({
-    //         id: 1,
-    //         items: foods,
-    //         tableNumber:4,
-    //         status: "inKitchen",
-    //         total:150
-    //     })
-    // }
-
-// console.log(()=>addOrder())
-
-    // const DeleteFood = id => {
-    //     const order = ordered.filter(elem => elem.id !== id)
-    //     // SelectProduct(order.id);
-    //     console.log(id)
-    // }
 
 
-    // const [Data, setData] = useState ({
-    //     quantityFood: parseFloat(quantity),
-    //     total: parseFloat(price)*quantity,
-    //     id: id
-    // })
-
-    // const {quantityFood, total, idFood}=Data;
-
-
-    // const UpdateChangeOfState = e => {
-    //     const {total} = e.target;
-    //     console.log(total)
-    // }
-
-    // const ChangeQuantityProduct = e => {
-    //     e.preventDefault();
-    //     console.log(Data)
-    // }
+const Menu = ({products,addItemToOrder}) => {
 
     return (
-        <div>
-            {
-                product.map((elem)=>(
-                    <img
-                    key= {elem.id}
-                    className='ImgsProducts'
-                    alt= {elem.name}
-                    src= {elem.img}
-                     onClick={() =>{
-                        //   addProduct(elem.id)
-                          addItemToOrder(elem.id)
-                        }}/>
-                ))
-            } 
+        <div className="containerImages">
+            <div className="containerBreakfast">
+                {
+                    products.map(product=> (
+                        (product.type === "breakfast") ? 
+                            <img
+                                key= {product.id}
+                                className='ImgsProducts'
+                                alt= {product.name}
+                                src= {product.img}
+                                onClick={() =>{
+                                addItemToOrder(product)
+                                }}
+                            />
+                        :
+                        <Fragment/>
+                    ))
+                }
+            </div>
+            <div className="containerDinner">
+                {
+                    products.map(product => (
+                        (product.type === "dinner") ?
+                            <img
+                            key= {product.id}
+                            className='ImgsProducts'
+                            alt= {product.name}
+                            src= {product.img}
+                            onClick={() =>{
+                                addItemToOrder(product)
+                                }}
+                            />
+                        : <Fragment/>
+                    ))
+                }
+            </div>
         </div>
     )
 }
 export default Menu;
+
